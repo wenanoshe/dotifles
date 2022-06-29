@@ -9,14 +9,19 @@ else
   exit 1
 fi
 
+cd $HOME/Desktop/dotBackups/
+
 # Copy neovim custom config
-cp -r /home/$USER/.config/nvim/lua/custom ./neovim
+cp -r $HOME/.config/nvim/lua/custom ./neovim
 
 # Bspwm config
 cp -r $HOME/.config/bspwm/bspwmrc .
 
 # Sxhkd config 
 cp -r $HOME/.config/sxhkd/sxhkdrc .
+
+# ZSH config
+cp -r $HOME/.zshrc .
 
 # PUSH TO GITHUB #
 
