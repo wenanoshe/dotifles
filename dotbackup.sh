@@ -13,10 +13,10 @@ fi
 cp -r /home/$USER/.config/nvim/lua/custom ./neovim
 
 # Bspwm config
-# cp -r $HOME/.config/bspwm/bspwmrc .
+cp -r $HOME/.config/bspwm/bspwmrc .
 
 # Sxhkd config 
-# cp -r $HOME/.config/sxhkd/sxhkdrc .
+cp -r $HOME/.config/sxhkd/sxhkdrc .
 
 # PUSH TO GITHUB #
 
@@ -32,7 +32,7 @@ read continue
 
 if [[ $continue == 1 ]]; then
   # push to Github
-  git add -v *;
+  git add *;
   git commit -m "New backup `date +'%d-%m-%Y %H:%M:%S'`";
   git push origin main
 else 
