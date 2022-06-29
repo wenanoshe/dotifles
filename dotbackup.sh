@@ -10,7 +10,7 @@ else
 fi
 
 # Copy neovim custom config
-cp -r $HOME/.config/nvim/lua/config ./neovim
+cp -r /home/$USER/.config/nvim/lua/custom ./neovim
 
 # Bspwm config
 # cp -r $HOME/.config/bspwm/bspwmrc .
@@ -20,16 +20,22 @@ cp -r $HOME/.config/nvim/lua/config ./neovim
 
 # PUSH TO GITHUB #
 
-# Check git status
-gs="$(git status | grep -i "modified")"
-echo "${gs}"
+# Git stauts
+git status
+echo ' '
 
-# If there is a new change
-if [[ $gs == *"modified"* ]]; then
-  echo "push"
+# Ask if continue
+echo "Do you want to continue?
+  1: Yes, 0: No"
+
+read continue
+
+if [[ $continue == 1 ]]; then
+  # push to Github
+  git add -v *;
+  git commit -m "New backup `date +'%d-%m-%Y %H:%M:%S'`";
+  git push origin main
+else 
+  echo 'Cancelled backup'
 fi
 
-# push to Github
-git add -uv;
-git commit -m "New backup `date +'%d-%m-%Y %H:%M:%S'`";
-git push origin master
