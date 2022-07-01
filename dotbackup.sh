@@ -22,6 +22,7 @@ cp -r $HOME/.config/sxhkd/sxhkdrc .
 
 # ZSH config
 cp -r $HOME/.zshrc .
+mv .zshrc ./zshrc
 
 # PUSH TO GITHUB #
 
