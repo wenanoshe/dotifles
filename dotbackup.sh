@@ -17,6 +17,9 @@ cp -r $HOME/.config/nvim/lua/custom ./neovim
 # Bspwm config
 cp -r $HOME/.config/bspwm/bspwmrc .
 
+# Polybar config
+cp -r $HOME/.config/bspwm/polybar/ ./polybar
+
 # Sxhkd config 
 cp -r $HOME/.config/sxhkd/sxhkdrc .
 
