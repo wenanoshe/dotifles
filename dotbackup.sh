@@ -28,7 +28,7 @@ cp -r $HOME/.zshrc .
 mv .zshrc ./zshrc
 
 # Workspaces config
-cp -r $HOME/Desktop/workspaces.sh ./workspaces/.
+cp -r $HOME/Desktop/workspaces.sh ./
 
 
 # PUSH TO GITHUB #
