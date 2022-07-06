@@ -27,6 +27,10 @@ cp -r $HOME/.config/sxhkd/sxhkdrc .
 cp -r $HOME/.zshrc .
 mv .zshrc ./zshrc
 
+# Workspaces config
+cp -r $HOME/Desktop/workspaces.sh ./workspaces/.
+
+
 # PUSH TO GITHUB #
 
 # Git stauts
