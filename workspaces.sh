@@ -6,7 +6,7 @@ declare -a workspaces=(
 [2]="$HOME/Dev/Learning/ReactJs/digital-bussines-card"
 [3]="$HOME/Dev/Learning/JavaScript/AJAX/AJAXII"
 [4]="$HOME/Dev/LayBlu/layblu-ui-page/"
-[5]="$HOME/Dev/Learning/ReactJs/crud/"
+[5]="$HOME/Dev/Learning/ReactJs/song-search/"
 [6]="$HOME/Dev/tx-code/"
 )
 
@@ -23,7 +23,7 @@ echo "What are you going to work on today?
   2 => Digital bussines card with React
   3 => Learning AJAX
   4 => Layblu UI Page
-  5 => CRUD with react
+  5 => Song search with react
   6 => Tx Code Project
   "
 
