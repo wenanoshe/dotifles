@@ -37,6 +37,10 @@ super + {w,m,x,r,s}
 super + g
     rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
+# Rofi emoji 
+super + period
+   rofi -modi emoji -show emoji
+
 ##---------- Applications ----------##
 
 # Launch Apps
