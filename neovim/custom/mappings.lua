@@ -9,10 +9,6 @@ M.general = {
     ["<leader>o"] = { "o<ESC>", "New Line below" },
     ["<leader>tr"] = { "<Cmd> Telescope registers <CR>", "Telescope registers" },
    },
-
-  i = {
-    -- ["<C-s>"] = { "<cmd> w <CR>", "﬚  save file" },
-  },
 }
 
 return M

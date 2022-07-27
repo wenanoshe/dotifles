@@ -1,7 +1,7 @@
--- example file i.e lua/custom/init.lua
+local opt = vim.opt
 
--- load your globals, autocmds here or anything .__.
--- local opt = vim.opt
+opt.relativenumber = true
+opt.breakindent = true
 
 local autocmd = vim.api.nvim_create_autocmd
 
