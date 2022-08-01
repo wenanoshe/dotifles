@@ -7,7 +7,7 @@ declare -a workspaces=(
 [3]="$HOME/Dev/Learning/JavaScript/AJAX/AJAXII"
 [4]="$HOME/Dev/LayBlu/layblu-ui-page/"
 [5]="$HOME/Dev/txcode/"
-[6]="$HOME/Dev/Learning/ReactJs/contact-form/"
+[6]="$HOME/Dev/Learning/ReactJs/modals/"
 )
 
 date=$(date '+%d/%m/%G')
