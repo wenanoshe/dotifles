@@ -7,7 +7,7 @@ declare -a workspaces=(
 [3]="$HOME/Dev/Learning/JavaScript/AJAX/AJAXII"
 [4]="$HOME/Dev/LayBlu/layblu-ui-page/"
 [5]="$HOME/Dev/txcode/"
-[6]="$HOME/Dev/Learning/ReactJs/modals/"
+[6]="$HOME/Dev/Learning/ReactJs/react-routes/"
 )
 
 date=$(date '+%d/%m/%G')
@@ -24,7 +24,7 @@ echo "What are you going to work on today?
   3 => Learning AJAX
   4 => Layblu UI Page
   5 => Tx Code Project with React
-  6 => Form with valiation
+  6 => React routes
   "
 
 # Read input
