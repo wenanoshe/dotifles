@@ -51,28 +51,11 @@ return {
   },
 
   -- Formating
-  ["jose-elias-alvarez/null-ls.nvim"] = {
+              ["jose-elias-alvarez/null-ls.nvim"] = {
       after = "nvim-lspconfig",
       config = function()
          require "custom.plugins.null-ls"
       end,
   }
-
-   -- ["williamboman/mason.nvim"] = {
-   --    ensure_installed = {
-   --      -- lua stuff
-   --      "lua-language-server",
-   --
-   --      -- web dev
-   --      "css-lsp",
-   --      "html-lsp",
-   --      "emmet-ls",
-   --      "json-lsp",
-   --      "prettier",
-   --      "eslint-lsp",
-   --
-   --    },
-   --  },
-
 
 }
