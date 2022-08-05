@@ -33,11 +33,8 @@ null_ls.setup {
   -- add your sources / config options here
   sources = {
     -- webdev stuff
-    b.formatting.eslint,
-    b.formatting.prettier,
+    b.formatting.prettierd,
 
-    -- Lua
-    b.formatting.stylua,
   },
   debug = false,
   on_attach = function(client, bufnr)

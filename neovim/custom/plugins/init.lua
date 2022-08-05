@@ -51,11 +51,19 @@ return {
   },
 
   -- Formating
-              ["jose-elias-alvarez/null-ls.nvim"] = {
+   ["jose-elias-alvarez/null-ls.nvim"] = {
       after = "nvim-lspconfig",
       config = function()
          require "custom.plugins.null-ls"
       end,
+  },
+
+  ["https://git.sr.ht/~whynothugo/lsp_lines.nvim"] = {
+    after = 'nvim-lspconfig',
+    config = function ()
+      require("lsp_lines").setup()
+    end
+
   }
 
 }
