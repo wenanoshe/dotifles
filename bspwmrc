@@ -23,7 +23,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 source "$BSPDIR"/themes/current.bash
 
 ## Get the wallpaper from theme file
-CURRENT_WALLPAPER="$wallpaper"
+CURRENT_WALLPAPER="$HOME/Pictures/wallpaper/Anime/genshin-impact-character.jpg"
 
 ## Get the colors from theme file
 FOREGROUND="$foreground"
@@ -58,7 +58,7 @@ workspaces() {
 	name=1
 	for monitor in `bspc query -M`; do
 		#bspc monitor ${monitor} -n "$name" -d 'I' 'II' 'III' 'IV' 'V' 'VI' 'VII' 'VIII'
-		bspc monitor ${monitor} -n "$name" -d '' '' '' '' '' '' '' ''
+		bspc monitor ${monitor} -n "$name" -d '' '' '' '' '' '' '' ''
 		let name++
 	done
 }
@@ -97,15 +97,16 @@ bspc rule -a firefox desktop='^2' follow=on focus=on
 bspc rule -a chromium desktop='^2' follow=on focus=on
 bspc rule -a brave desktop='^2' follow=on focus=on
 
-## 3 > files (always open file manager on workspace-3)
-declare -a files=(Pcmanfm Thunar qBittorrent)
-for i in ${files[@]}; do
-   bspc rule -a $i desktop='^3' follow=on focus=on; done
-
-## 4 > code (always open editors on workspace-4)
+## 3 > code (always open editors on workspace-3)
 declare -a code=(Geany code-oss)
 for i in ${code[@]}; do
+   bspc rule -a $i desktop='^3' follow=on focus=on; done
+
+## 4 > files (always open file manager on workspace-4)
+declare -a files=(Pcmanfm Thunar qBittorrent)
+for i in ${files[@]}; do
    bspc rule -a $i desktop='^4' follow=on focus=on; done
+
 
 ## 5 > office and docs (always open office/doc apps on workspace-5)
 declare -a office=(Gucharmap Atril Evince \
