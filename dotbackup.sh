@@ -30,6 +30,9 @@ mv .zshrc ./zshrc
 # Workspaces config
 cp -r $HOME/Desktop/workspaces.sh ./
 
+# alacritty config
+cp -r $HOME/.config/bspwm/alacritty/ ./
+
 
 # PUSH TO GITHUB #
 

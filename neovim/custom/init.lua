@@ -3,9 +3,6 @@ local opt = vim.opt
 opt.relativenumber = true
 opt.breakindent = true
 
-vim.diagnostic.config({
-  virtual_text = false
-})
 
 -- Show line diagnostics automatically in hover window
 -- vim.o.updatetime = 250
