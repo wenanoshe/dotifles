@@ -219,6 +219,7 @@ label-separator = "∙"
 label-separator-padding = 0
 label-separator-foreground = ${color.ALTBLACK}
 
+
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/mod]
@@ -371,8 +372,7 @@ content-padding = 2
 [module/cpu]
 type = internal/cpu
 
-
-interval = 0.5
+interval = 1.5
 
 format = <label>
 format-prefix = 
@@ -381,7 +381,6 @@ format-prefix-foreground = ${color.YELLOW}
 format-background = ${color.BG3}
 
 label = " %percentage%%"
-
 
 ;; Memory custom
 
@@ -398,6 +397,40 @@ format-prefix-font = 2
 format-prefix-foreground = ${color.BLUE}
 
 label = " %mb_used%"
+
+;; Temperature 
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 80
+
+;units = false
+
+format = <ramp> <label>
+format-warn = <ramp> <label-warn>
+format-padding = 1
+
+;format-prefix = 
+format-prefix-font = 2
+
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-foreground = ${color.RED}
+
+ramp-0 =  "" 
+ramp-1 =  "" 
+ramp-2 =  "" 
+ramp-3 =  "" 
+ramp-font = 3
+ramp-foreground = ${color.YELLOW}
+
+
+;; Xwindow
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:30:...
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 ;;	    __________  ______
