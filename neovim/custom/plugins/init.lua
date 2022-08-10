@@ -19,6 +19,13 @@ return {
     end,
   },
 
+  ["folke/which-key.nvim"] = {
+    disable = false,
+    config = function()
+       require "plugins.configs.alpha"
+    end,
+  },
+
   ["windwp/nvim-ts-autotag"] = {
     ft = { "html", "javascriptreact" },
     after = "nvim-treesitter",
