@@ -7,24 +7,24 @@ declare -a workspaces=(
 [3]="$HOME/Dev/Learning/JavaScript/AJAX/AJAXII"
 [4]="$HOME/Dev/LayBlu/layblu-ui-page/"
 [5]="$HOME/Dev/txcode/"
-[6]="$HOME/Dev/Learning/ReactJs/react-routes/"
+[6]="$HOME/Dev/Learning/ReactJs/react-memorization/"
 )
 
 date=$(date '+%d/%m/%G')
 hour=$(date '+%H:%M')
 
-echo "Hello $USER!!"
-echo "Today is $date at $hour"
+echo "Hello $USER!! 👋"
+echo "Today is $date at $hour 📅"
 echo "-----------------------"
 
-echo "What are you going to work on today?
-  0 => LayBlu-Components
-  1 => First steps in ReactJs
-  2 => Digital bussines card with React
-  3 => Learning AJAX
-  4 => Layblu UI Page
-  5 => Tx Code Project with React
-  6 => React routes
+echo "What are you going to work 🔧 on today ?
+  0 > LayBlu-Components
+  1 > First steps in ReactJs
+  2 > Digital bussines card with React
+  3 > Learning AJAX
+  4 > Layblu UI Page
+  5 > Tx Code Project with React
+  6 > React memorization ⚛ 🧠
   "
 
 # Read input
