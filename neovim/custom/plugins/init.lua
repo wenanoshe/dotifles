@@ -22,7 +22,7 @@ return {
   ["folke/which-key.nvim"] = {
     disable = false,
     config = function()
-       require "plugins.configs.alpha"
+       require "plugins.configs.whichkey"
     end,
   },
 
