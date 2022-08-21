@@ -21,7 +21,7 @@ cp -r $HOME/.config/bspwm/bspwmrc .
 cp -r $HOME/.config/bspwm/polybar/ ./polybar
 
 # Sxhkd config 
-cp -r $HOME/.config/sxhkd/sxhkdrc .
+cp -r $HOME/.config/bspwm/sxhkdrc .
 
 # ZSH config
 cp -r $HOME/.zshrc .
@@ -32,6 +32,9 @@ cp -r $HOME/Desktop/workspaces.sh ./
 
 # alacritty config
 cp -r $HOME/.config/bspwm/alacritty/ ./
+
+# Backup to external hdd
+cp -r $HOME/Desktop/backup.sh
 
 
 # PUSH TO GITHUB #

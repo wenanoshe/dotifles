@@ -130,6 +130,7 @@ alias sxhkdrc='ranger /home/wenanoshe/.config/sxhkd'
 alias neovimrc='ranger /home/wenanoshe/.config/nvim'
 alias work='sh /home/wenanoshe/Desktop/workspaces.sh'
 alias dotbackup='/home/wenanoshe/Desktop/dotBackups/dotbackup.sh'
+alias backupDev='sh /home/wenanoshe/Desktop/backup.sh'
 alias cra='npx create-react-app'
 alias vite-react='npm create vite@latest'
 

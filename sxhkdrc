@@ -9,17 +9,18 @@ super + Return
 
 # Terminal (floating)
 super + shift + Return
-	bspterm -f
+	bspterm --float
 
 # Terminal (fullscreen)
 super + t
-	bspterm -s	
+	bspterm --full
 
 ##---------- Rofi Launcher & Menus ----------##
 
 # Rofi App Launcher
 alt + F1
-	sh ~/.config/bspwm/rofi/bin/launcher
+# sh ~/.config/bspwm/rofi/bin/launcher
+ bash ~/.config/rofi/launchers/type-1/launcher.sh
 
 # Rofi Network Menu
 super + n
@@ -30,8 +31,8 @@ super + shift + t
 	sh ~/.config/bspwm/rofi/bin/themes
 
 # Rofi Menus/Applets
-super + {w,m,x,r,s}
-	sh ~/.config/bspwm/rofi/bin/{windows,mpd,powermenu,asroot,screenshot}
+super + {m,r,s,x,q}
+	sh ~/.config/rofi/applets/bin/{mpd,appasroot,screenshot,powermenu,quicklinks}.sh
 
 # Rofi greenclip
 super + g
