@@ -44,12 +44,10 @@ git status
 echo ' '
 
 # Ask if continue
-echo "Do you want to continue?
-  1: Yes, 0: No"
+read -p "Do you want to continue? [y/n] : "
 
-read continue
 
-if [[ $continue == 1 ]]; then
+if [[ $REPLY == y ]]; then
   # push to Github
   git add *;
   git commit -m "New backup `date +'%d-%m-%Y %H:%M:%S'`";
