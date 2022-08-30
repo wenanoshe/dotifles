@@ -7,7 +7,7 @@ declare -a workspaces=(
 [3]="$HOME/Dev/Learning/JavaScript/AJAX/AJAXII"
 [4]="$HOME/Dev/LayBlu/layblu-ui-page/"
 [5]="$HOME/Dev/txcode/"
-[6]="$HOME/Dev/Learning/ReactJs/react-context/"
+[6]="$HOME/Dev/Learning/ReactJs/redux/"
 )
 
 date=$(date '+%d/%m/%G')
@@ -24,11 +24,11 @@ echo "What are you going to work 🔧 on today ?
   3 > Learning AJAX
   4 > Layblu UI Page
   5 > Tx Code Project with React
-  6 > React Context ⚛
+  6 > Redux ⚛
   "
 
 # Read input
-read selectWorkspace
+read -p '[0 - 6]: ' selectWorkspace
 
 if [[ $selectWorkspace -gt -1 && $selectWorkspace -lt ${#workspaces[@]} ]]; then
   cd ${workspaces[$selectWorkspace]}
