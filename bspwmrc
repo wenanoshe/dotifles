@@ -164,7 +164,7 @@ ksuperkey -e 'Super_L=Alt_L|F1' &
 ksuperkey -e 'Super_R=Alt_L|F1' &
 
 # Enable Greenclip, for clip management
-greenclip &
+greenclip daemon &
 
 # Enable power management
 xfce4-power-manager &
