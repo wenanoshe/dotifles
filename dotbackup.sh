@@ -11,6 +11,9 @@ fi
 
 cd $HOME/Desktop/dotBackups/
 
+#Copy git config 
+cp -r $HOME/.gitconfig ./
+
 # Copy neovim custom config
 cp -r $HOME/.config/nvim/lua/custom ./neovim
 
