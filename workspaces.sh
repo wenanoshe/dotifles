@@ -2,12 +2,11 @@
 
 declare -a workspaces=(
 [0]="$HOME/Documents/LayBlu/Componentes-UI/"
-[1]="$HOME/Dev/Learning/ReactJs/firststeps"
-[2]="$HOME/Dev/Learning/ReactJs/digital-bussines-card"
-[3]="$HOME/Dev/Learning/JavaScript/AJAX/AJAXII"
-[4]="$HOME/Dev/LayBlu/layblu-ui-page/"
-[5]="$HOME/Dev/txcode/"
-[6]="$HOME/Dev/Projects/pomo-san/"
+[1]="$HOME/Dev/LayBlu/layblu-ui-page/"
+[2]="$HOME/Dev/txcode/"
+[3]="$HOME/Dev/Projects/todo-list/"
+[4]="$HOME/Dev/Projects/pomo-san/"
+[5]="$HOME/Dev/Projects/whether-pwa"
 )
 
 date=$(date '+%d/%m/%G')
@@ -18,13 +17,12 @@ echo "Today is $date at $hour 📅"
 echo "-----------------------"
 
 echo "What are you going to work 🔧 on today ?
-  0 > LayBlu-Components
-  1 > First steps in ReactJs
-  2 > Digital bussines card with React
-  3 > Learning AJAX
-  4 > Layblu UI Page
-  5 > Tx Code Project with React
-  6 > Pomo-san, pomodoro app
+  0: Layblu Componentes-UI
+  1: Layblu page
+  2: TxCode 🧑‍💻
+  3: Todo List ☑
+  4: Pomo-san ⏲
+  5: Whether PWA ⛅
   "
 
 # Read input
