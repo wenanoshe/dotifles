@@ -1,0 +1,22 @@
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[user]
+	name = Braider Perez
+	email = braiderandreyp@gmail.com
+[core]
+	editor = nvim
+  pager = delta
+[init]
+	defaultBranch = main
+[credential]
+	helper = store
+[merge]
+	tool = nvimdiff
+  conflictstyle = diff3
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  navigate = true
+  line-numbers = true
+[diff]
+  colorMoved = default
