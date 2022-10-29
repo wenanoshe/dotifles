@@ -14,7 +14,7 @@ declare -a workspaces=(
 [2]="$HOME/Dev/txcode/"
 [3]="$HOME/Dev/Projects/todo-list/"
 [4]="$HOME/Dev/Projects/pomo-san/"
-[5]="$HOME/Dev/Projects/whether-pwa"
+[5]="$HOME/Dev/Projects/weather-pwa/"
 )
 
 date=$(date '+%d/%m/%G')
