@@ -132,7 +132,7 @@ alias work='sh /home/wenanoshe/Desktop/workspaces.sh'
 alias dotbackup='/home/wenanoshe/Desktop/dotBackups/dotbackup.sh'
 alias backupDev='sh /home/wenanoshe/Desktop/backup.sh'
 alias cra='npx create-react-app'
-alias create-vite='npm create vite@latest'
+alias new-vite='npm create vite@latest'
 
 # ls
 alias l='ls -lh'

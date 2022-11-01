@@ -2,7 +2,8 @@ local opt = vim.opt
 
 opt.relativenumber = true
 opt.breakindent = true
-
+opt.foldmethod = 'indent'
+opt.foldenable = false
 
 -- Show line diagnostics automatically in hover window
 -- vim.o.updatetime = 250
