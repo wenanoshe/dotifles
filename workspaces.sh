@@ -15,6 +15,7 @@ declare -a workspaces=(
 [3]="$HOME/Dev/Projects/todo-list/"
 [4]="$HOME/Dev/Projects/pomo-san/"
 [5]="$HOME/Dev/Projects/weather-pwa/"
+[6]="$HOME/Dev/Projects/weneedworkout/"
 )
 
 date=$(date '+%d/%m/%G')
@@ -31,11 +32,12 @@ echo "What are you going to work 🔧 on today ?
   3: Todo List ☑
   4: Pomo-san ⏲
   5: Whether PWA ⛅
+  6: WeNeedWorkout 💪
   "
 
 # Read input
 
-read -p "[0 - 5]: " selectWorkspace
+read -p "[0 - 6]: " selectWorkspace
 
 if [[ $selectWorkspace -gt -1 && $selectWorkspace -lt ${#workspaces[@]} ]]; then
   cd ${workspaces[$selectWorkspace]}
@@ -43,12 +45,4 @@ if [[ $selectWorkspace -gt -1 && $selectWorkspace -lt ${#workspaces[@]} ]]; then
 else 
   echo "That workspace doesn't exist!!"
 fi
-
-
-
-# if [ $selectWorkspace -lt 0 ] || [ $selectWorkspace -gt ${#workspaces[@]} ]
-# then 
-#   echo -e "${Red}The selected workspace is not stored!"
-#   exit
-# fi
 
