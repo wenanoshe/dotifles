@@ -65,12 +65,20 @@ return {
       end,
   },
 
-  ["https://git.sr.ht/~whynothugo/lsp_lines.nvim"] = {
+  -- ["folke/trouble.nvim"] = {
+  --   requires = "kyazdani42/nvim-web-devicons",
+  --   config = function()
+  --     require("trouble").setup {}
+  --   end
+  -- }
+
+    ["https://git.sr.ht/~whynothugo/lsp_lines.nvim"] = {
     after = 'nvim-lspconfig',
     config = function ()
       require("lsp_lines").setup()
     end
 
   }
+
 
 }
