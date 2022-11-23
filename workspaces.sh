@@ -9,13 +9,12 @@ Clear='\033[0m'
 # ####
 
 declare -a workspaces=(
-[0]="$HOME/Documents/LayBlu/Componentes-UI/"
-[1]="$HOME/Dev/LayBlu/layblu-ui-page/"
-[2]="$HOME/Dev/txcode/"
-[3]="$HOME/Dev/Projects/todo-list/"
-[4]="$HOME/Dev/Projects/pomo-san/"
-[5]="$HOME/Dev/Projects/weather-pwa/"
-[6]="$HOME/Dev/Projects/weneedworkout/"
+[0]="$HOME/Dev/txcode/"
+[1]="$HOME/Dev/Projects/todo-list/"
+[2]="$HOME/Dev/Projects/pomo-san/"
+[3]="$HOME/Dev/Projects/weather-pwa/"
+[4]="$HOME/Dev/Projects/weneedworkout/"
+[5]="$HOME/Dev/Projects/layblu"
 )
 
 date=$(date '+%d/%m/%G')
@@ -26,18 +25,19 @@ echo "Today is $date at $hour 📅"
 echo "-----------------------"
 
 echo "What are you going to work 🔧 on today ?
-  0: Layblu Componentes-UI
-  1: Layblu page
-  2: TxCode 🧑‍💻
-  3: Todo List ☑
-  4: Pomo-san ⏲
-  5: Whether PWA ⛅
-  6: WeNeedWorkout 💪
+  1: TxCode 🧑‍💻
+  2: Todo List ☑
+  3: Pomo-san ⏲
+  4: Whether PWA ⛅
+  5: WeNeedWorkout 💪
+  6: Layblu 🔷 
   "
 
 # Read input
 
-read -p "[0 - 6]: " selectWorkspace
+read -p "[0 - ${#workspaces[@]}]: " answer
+
+selectWorkspace=$answer-1
 
 if [[ $selectWorkspace -gt -1 && $selectWorkspace -lt ${#workspaces[@]} ]]; then
   cd ${workspaces[$selectWorkspace]}
