@@ -22,6 +22,10 @@ alt + F1
 # sh ~/.config/bspwm/rofi/bin/launcher
  bash ~/.config/rofi/launchers/type-1/launcher.sh
 
+# Rofi windows 
+super + w
+ bash ~/.config/rofi/launchers/type-1/windows.sh
+
 # Rofi Network Menu
 super + n
 	nmd
