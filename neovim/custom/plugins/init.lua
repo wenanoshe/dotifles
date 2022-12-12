@@ -65,6 +65,7 @@ return {
       end,
   },
 
+
   -- ["folke/trouble.nvim"] = {
   --   requires = "kyazdani42/nvim-web-devicons",
   --   config = function()
