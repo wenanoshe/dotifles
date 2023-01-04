@@ -48,7 +48,7 @@ ALTWHITE="$color15"
 
 ## Bspwm appearance
 CURRENT_BORDER='3'
-CURRENT_GAP='5'
+CURRENT_GAP='4'
 CURRENT_SRATIO='0.50'
 
 ## Configurations --------------------------------------------#

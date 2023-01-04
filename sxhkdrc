@@ -61,7 +61,10 @@ super + p
 
 # Lockscreen
 super + alt + l
-    betterlockscreen --lock
+  betterlockscreen --lock
+# Bluethoot
+super + b
+  blueman-manager
 
 ##---------- System Keys ----------##
 

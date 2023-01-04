@@ -365,7 +365,7 @@ content = ◆
 
 content-background = ${color.BACKGROUND}
 content-foreground = ${color.BLACK}
-content-padding = 2
+content-padding = 1
 
 ;; Custom CPU module
 
@@ -424,13 +424,6 @@ ramp-2 =  ""
 ramp-3 =  "" 
 ramp-font = 3
 ramp-foreground = ${color.YELLOW}
-
-
-;; Xwindow
-
-[module/xwindow]
-type = internal/xwindow
-label = %title:0:30:...
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 ;;	    __________  ______
