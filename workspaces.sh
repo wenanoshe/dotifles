@@ -9,12 +9,10 @@ Clear='\033[0m'
 # ####
 
 declare -a workspaces=(
-[0]="$HOME/Dev/Projects/clickspersecond/"
-[1]="$HOME/Dev/Projects/todo-list/"
-[2]="$HOME/Dev/Projects/pomo-san/"
-[3]="$HOME/Dev/Projects/weather-pwa/"
-[4]="$HOME/Dev/Projects/weneedworkout/"
-[5]="$HOME/Dev/Projects/layblu"
+[0]="$HOME/Dev/Projects/pomo-san/"
+[1]="$HOME/Dev/Projects/weather-pwa/"
+[2]="$HOME/Dev/Projects/weneedworkout/"
+[3]="$HOME/Dev/Projects/layblu"
 )
 
 date=$(date '+%d/%m/%G')
@@ -25,17 +23,15 @@ echo "Today is $date at $hour 📅"
 echo "-----------------------"
 
 echo "What are you going to work 🔧 on today ?
-  1: Clicks per second 🧑‍💻
-  2: Todo List ☑
-  3: Pomo-san ⏲
-  4: Whether PWA ⛅
-  5: WeNeedWorkout 💪
-  6: Layblu 🔷 
+  1: Pomo-san ⏲
+  2: Whether PWA ⛅
+  3: WeNeedWorkout 💪
+  4: Layblu 🔷 
   "
 
 # Read input
 
-read -p "[0 - ${#workspaces[@]}]: " answer
+read -p "[1 - ${#workspaces[@]}]: " answer
 
 selectWorkspace=$answer-1
 
