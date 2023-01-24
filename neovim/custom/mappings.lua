@@ -7,9 +7,10 @@ M.general = {
     ["<leader>O"] = { "<S-o><ESC>", "New Line above" },
     ["<leader>o"] = { "o<ESC>", "New Line below" },
     ["<leader>tr"] = { "<Cmd> Telescope registers <CR>", "Telescope registers" },
+    ["<leader>ps"] = { "<cmd> PackerSync <CR>", "Update plugins" }
    },
    i = {
-     ["C-s"] = {"<ESC> :echo 'whattt'", "Save in insert mode and change to normal mode"}
+     ["C-s"] = {"<ESC> :w", "Save in insert mode and change to normal mode"}
    },
 }
 

@@ -1,5 +1,13 @@
 return {
 
+  ["ahmedkhalf/project.nvim"] = {
+    config = function ()
+      require("project_nvim").setup()
+      require "custom.plugins.project"
+
+    end
+  },
+
   ["neovim/nvim-lspconfig"] = {
     config = function()
       require "plugins.configs.lspconfig"
