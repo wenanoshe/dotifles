@@ -9,10 +9,9 @@ Clear='\033[0m'
 # ####
 
 declare -a workspaces=(
-[0]="$HOME/Dev/Projects/pomo-san/"
-[1]="$HOME/Dev/Projects/weather-pwa/"
-[2]="$HOME/Dev/Projects/weneedworkout/"
-[3]="$HOME/Dev/Projects/layblu"
+[0]="$HOME/Dev/Projects/weather-pwa/"
+[1]="$HOME/Dev/Projects/weneedworkout/"
+[2]="$HOME/Dev/Projects/layblu"
 )
 
 date=$(date '+%d/%m/%G')
@@ -23,10 +22,9 @@ echo "Today is $date at $hour 📅"
 echo "-----------------------"
 
 echo "What are you going to work 🔧 on today ?
-  1: Pomo-san ⏲
-  2: Whether PWA ⛅
-  3: WeNeedWorkout 💪
-  4: Layblu 🔷 
+  1: Whether PWA ⛅
+  2: WeNeedWorkout 💪
+  3: Layblu 🔷 
   "
 
 # Read input

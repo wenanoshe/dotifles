@@ -15,7 +15,8 @@ return {
   ["goolord/alpha-nvim"] = {
     disable = false,
     config = function()
-       require "plugins.configs.alpha"
+      require "plugins.configs.alpha"
+      require "custom.plugins.alpha"
     end,
   },
 
