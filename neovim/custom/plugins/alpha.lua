@@ -17,11 +17,6 @@ local function footer()
     return datetime .. "   " .. total_plugins .. " plugins" .. nvim_version_info
 end
 
-local function greet()
-    -- local datetime = os.date(" %d-%m-%Y   %H:%M:%S")
-    -- return datetime
-end
-
 local logo = {
     "",
     "",
@@ -51,6 +46,7 @@ dashboard.section.footer.opts.hl = "Constant"
 dashboard.section.buttons.val = {
     dashboard.button("<Leader>ff", "  File Explorer"),
     dashboard.button("<Leader>fo", "  Find File"),
+    dashboard.button("<Leader>pr", "📦  Find Project"),
     dashboard.button("<Leader>fw", "  Find Word"),
     dashboard.button("<Leader>ps", "  Update plugins", "<cmd>PackerSync<CR>"),
     dashboard.button("q", "  Quit", ":qa<cr>")

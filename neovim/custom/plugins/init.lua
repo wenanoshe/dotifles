@@ -1,10 +1,28 @@
 return {
 
-  ["ahmedkhalf/project.nvim"] = {
-    config = function ()
-      require("project_nvim").setup()
-      require "custom.plugins.project"
+  ["coffebar/project.nvim"] = {
+    branch = "session-manager",
+    config = function()
+      require("project_nvim").setup({
+        session_autoload = false,
+        silent_chdir = false,
+      })
+    end,
+  },
 
+  ["nvim-telescope/telescope.nvim"] = {
+    config = function ()
+      require "plugins.configs.telescope"
+      require "custom.plugins.telescope"
+    end
+  },
+
+-- session manager
+  ["Shatur/neovim-session-manager"] = {
+    config = function ()
+      require("session_manager").setup({
+        autoload_mode = require('session_manager.config').AutoloadMode.Disabled,
+      })
     end
   },
 
