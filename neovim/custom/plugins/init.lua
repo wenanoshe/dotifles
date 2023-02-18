@@ -1,5 +1,7 @@
 return {
 
+  -- ["ap/vim-css-color"] = {},
+
   ["coffebar/project.nvim"] = {
     branch = "session-manager",
     config = function()

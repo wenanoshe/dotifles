@@ -9,7 +9,7 @@ M.general = {
     ["<leader>tr"] = { "<Cmd> Telescope registers <CR>", "📜 Telescope registers" },
     ["<leader>ps"] = { "<cmd> PackerSync <CR>", "📤 Update plugins" },
     ["<leader>pr"] = { "<cmd> Telescope projects <CR>", "📦 Saved Projects" },
-    ["<leader>lls"] = { "<cmd> SessionManager load_last_session <CR>", "📦 Load last session" },
+    ["<leader>lls"] = { "<cmd> SessionManager load_last_session<CR>", "📦 Load last session" },
    },
    i = {
      ["C-s"] = {"<ESC> :w", "Save in insert mode and change to normal mode"}
