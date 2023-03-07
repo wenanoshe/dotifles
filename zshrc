@@ -131,6 +131,7 @@ alias work='sh /home/wenanoshe/Desktop/workspaces.sh'
 alias dotbackup='/home/wenanoshe/Desktop/dotBackups/dotbackup.sh'
 alias backupDev='sh /home/wenanoshe/Desktop/backup.sh'
 alias newproject='npm create vite@latest'
+alias mountdrive='sudo mount'
 
 # ls
 alias l='ls -lh'

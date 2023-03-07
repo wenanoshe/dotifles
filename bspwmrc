@@ -99,7 +99,7 @@ for i in ${web[@]}; do
    bspc rule -a $i desktop='^2' follow=on focus=on; done
 
 ## 3 > code (always open editors on workspace-3)
-declare -a code=(Geany code-oss VSCodium)
+declare -a code=(Geany code-oss VSCodium terminal.exe)
 for i in ${code[@]}; do
    bspc rule -a $i desktop='^3' follow=on focus=on; done
 
