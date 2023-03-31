@@ -33,8 +33,8 @@ null_ls.setup {
   -- add your sources / config options here
   sources = {
     -- webdev stuff
-    -- b.formatting.prettierd,
-    b.formatting.rome
+    b.formatting.prettierd,
+    -- b.formatting.rome
 
   },
   debug = false,

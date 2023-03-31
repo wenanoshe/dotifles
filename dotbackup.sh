@@ -39,6 +39,8 @@ cp -r $HOME/.config/bspwm/alacritty/ ./
 # Backup to external hdd
 cp -r $HOME/Desktop/backup.sh
 
+# Mount - unmoutn commands
+cp -r $HOME/Desktop/mount-umount/ ./
 
 # PUSH TO GITHUB #
 
