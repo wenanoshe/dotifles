@@ -22,7 +22,7 @@ format-volume = <ramp-volume> <label-volume>
 
 format-muted = <label-muted>
 format-muted-prefix = 婢
-format-muted-prefix-font = 2
+format-muted-prefix-font = 1
 format-muted-prefix-foreground = ${color.RED}
 
 label-volume = %percentage%%
@@ -39,7 +39,7 @@ ramp-volume-6 = 墳
 ramp-volume-7 = 墳
 ramp-volume-8 = 墳
 ramp-volume-9 = 墳
-ramp-volume-font = 2
+ramp-volume-font = 1
 ramp-volume-foreground = ${color.BLUE}
 
 ramp-headphones-0 = 
@@ -52,7 +52,7 @@ type = custom/text
 
 content = " NA"
 content-prefix = 
-content-prefix-font = 2
+content-prefix-font = 1
 content-prefix-foreground = ${color.RED}
 content-padding = 0
 
@@ -77,7 +77,7 @@ ramp-6 = 
 ramp-7 = 
 ramp-8 = 
 ramp-9 = 
-ramp-font = 2
+ramp-font = 1
 ramp-foreground = ${color.MAGENTA}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -103,7 +103,7 @@ ramp-6 = 
 ramp-7 = 
 ramp-8 = 
 ramp-9 = 
-ramp-font = 2
+ramp-font = 1
 ramp-foreground = ${color.MAGENTA}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -126,7 +126,7 @@ format-discharging = <ramp-capacity> <label-discharging>
 
 format-full = <label-full>
 format-full-prefix = " "
-format-full-prefix-font = 2
+format-full-prefix-font = 1
 format-full-prefix-foreground = ${color.RED}
 
 label-charging = %percentage%%
@@ -138,7 +138,7 @@ ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
-ramp-capacity-font = 2
+ramp-capacity-font = 1
 ramp-capacity-foreground = ${color.YELLOW}
 
 animation-charging-0 = 
@@ -146,7 +146,7 @@ animation-charging-1 = 
 animation-charging-2 = 
 animation-charging-3 = 
 animation-charging-4 = 
-animation-charging-font = 2
+animation-charging-font = 1
 animation-charging-foreground = ${color.GREEN}
 animation-charging-framerate = 750
 
@@ -177,7 +177,7 @@ ws-icon-7 = VIII;
 ws-icon-default = 
 
 format = <label-state>
-format-font = 2
+format-font = 1
 
 label-monitor = %name%
 
@@ -253,11 +253,11 @@ time-alt = %A, %d %B %Y
 
 format = <label>
 format-prefix = " "
-format-prefix-font = 3
+format-prefix-font = 1
 format-prefix-foreground = ${color.RED}
 
 label = %time%
-label-font = 4
+label-font = 1
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -287,18 +287,18 @@ label-song-maxlen = 40
 label-song-ellipsis = true
 
 icon-play = 
-icon-play-font = 2
+icon-play-font = 1
 icon-play-foreground = ${color.GREEN}
 icon-pause = 
-icon-pause-font = 2
+icon-pause-font = 1
 icon-pause-foreground = ${color.YELLOW}
 icon-stop = 
 icon-stop-foreground = ${color.RED}
 icon-prev = 玲
-icon-prev-font = 2
+icon-prev-font = 1
 icon-prev-foreground = ${color.CYAN}
 icon-next = 怜
-icon-next-font = 2
+icon-next-font = 1
 icon-next-foreground = ${color.CYAN}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
@@ -412,7 +412,7 @@ format-warn = <ramp> <label-warn>
 format-padding = 1
 
 ;format-prefix = 
-format-prefix-font = 2
+format-prefix-font = 1
 
 label = %temperature-c%
 label-warn = %temperature-c%
@@ -422,7 +422,7 @@ ramp-0 =  ""
 ramp-1 =  "" 
 ramp-2 =  "" 
 ramp-3 =  "" 
-ramp-font = 3
+ramp-font = 1
 ramp-foreground = ${color.YELLOW}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

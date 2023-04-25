@@ -3,6 +3,13 @@ local overrides = require "custom.configs.overrides"
 ---@type NvPluginSpec[]
 local plugins = {
 
+{
+    "chikko80/error-lens.nvim",
+    event = "BufRead",
+    dependencies = {
+        "nvim-telescope/telescope.nvim"
+    }
+},
   -- Override plugin definition options
   {
     "nvim-telescope/telescope.nvim",
