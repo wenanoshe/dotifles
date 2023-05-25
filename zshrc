@@ -2,7 +2,18 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+export ZSH=$HOconst $button = document.querySelectorAll(".btn");
+
+$button.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        const $icon = btn.querySelector(".btn__icon");
+        btn.classList.add("btn--loading");
+
+        setTimeout(() => {
+            btn.classList.remove("btn--loading");
+        }, 5000);
+    });
+});ME/.oh-my-zsh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -157,3 +168,13 @@ alias gco='git checkout'
 alias gr='git restore'
 alias gd='git diff'
 alias gmg='git merge'
+
+# npm
+alias nrun='npm run'
+alias nrd='npm run dev'
+alias nrb='npm run build'
+alias nrs='npm run storybook'
+
+# yarn
+alias ys='yarn storybook'
+alias yd='yarn dev'
