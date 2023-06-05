@@ -2,18 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=$HOconst $button = document.querySelectorAll(".btn");
-
-$button.forEach((btn) => {
-    btn.addEventListener("click", () => {
-        const $icon = btn.querySelector(".btn__icon");
-        btn.classList.add("btn--loading");
-
-        setTimeout(() => {
-            btn.classList.remove("btn--loading");
-        }, 5000);
-    });
-});ME/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -174,6 +163,8 @@ alias nrun='npm run'
 alias nrd='npm run dev'
 alias nrb='npm run build'
 alias nrs='npm run storybook'
+alias nrl='npm run lint'
+alias nrf='npm run format'
 
 # yarn
 alias ys='yarn storybook'
