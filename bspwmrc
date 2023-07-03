@@ -23,7 +23,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 source "$BSPDIR"/themes/current.bash
 
 ## Get the wallpaper from theme file
-CURRENT_WALLPAPER="$HOME/Pictures/wallpaper/Anime/nilou-2.jpg"
+CURRENT_WALLPAPER="$HOME/Pictures/wallpaper/switch-wallpaper.jpg"
 
 ## Get the colors from theme file
 FOREGROUND="$foreground"
@@ -99,7 +99,7 @@ for i in ${web[@]}; do
    bspc rule -a $i desktop='^2' follow=on focus=on; done
 
 ## 3 > code (always open editors on workspace-3)
-declare -a code=(Geany code-oss VSCodium terminal.exe)
+declare -a code=(Geany code-oss VSCodium terminal.exe terminal64.exe)
 for i in ${code[@]}; do
    bspc rule -a $i desktop='^3' follow=on focus=on; done
 
