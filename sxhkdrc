@@ -1,5 +1,6 @@
 ## Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
-## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
+##
+## Keybindings config for Archcraft's BSPWM
 
 ##---------- Keybindings for bspwm ----------##
 
@@ -12,44 +13,35 @@ super + shift + Return
 	bspterm --float
 
 # Terminal (fullscreen)
-super + t
+super + alt + Return
 	bspterm --full
 
 ##---------- Rofi Launcher & Menus ----------##
 
 # Rofi App Launcher
 alt + F1
-# sh ~/.config/bspwm/rofi/bin/launcher
- bash ~/.config/rofi/launchers/type-1/launcher.sh
+	rofi_launcher
 
-# Rofi windows 
-super + w
- bash ~/.config/rofi/launchers/type-1/windows.sh
-
-# Rofi Network Menu
-super + n
-	nmd
-
-# Rofi Themes Menu
-super + shift + t
-	sh ~/.config/bspwm/rofi/bin/themes
+# Rofi Run
+alt + F2
+	rofi_runner
 
 # Rofi Menus/Applets
-super + {m,r,s,x,q}
-	sh ~/.config/rofi/applets/bin/{mpd,appasroot,screenshot,powermenu,quicklinks}.sh
+super + {m,n,r,s,t,w,x}
+	{rofi_music,nmd,rofi_asroot,rofi_screenshot,rofi_themes,rofi_windows,rofi_powermenu}
 
 # Rofi greenclip
 super + g
     rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
-# Rofi emoji 
 super + period
   rofi -modi emoji -show emoji -emoji-format '\{emoji\} <span weight="bold">\{name\}</span>[ <span size="small">(\{keywords\})</span>]'
+
 ##---------- Applications ----------##
 
 # Launch Apps
-super + shift + {f,w,e}
-	{thunar,brave,geany}
+super + shift + {f,w}
+	{thunar,brave}
 
 # Terminal Apps
 super + alt + {v,r,h,n}
@@ -57,47 +49,41 @@ super + alt + {v,r,h,n}
 
 # Color Picker
 super + p
-	color-gpick
+	bspcolorpicker
+
+# Music
+super + alt + m
+	bspmusic
 
 # Lockscreen
 super + alt + l
-  betterlockscreen --lock
-# Bluethoot
-super + b
-  blueman-manager
+    betterlockscreen --lock
 
 ##---------- System Keys ----------##
 
 # Take a screenshot
 Print
-	takeshot --now
+	bspscreenshot --now
 	
-# Take screenshot in 5 second
-# alt + Print	
-#	takeshot --in5
-
-# Take screenshot in 10 second
-# shift + Print	
-#	takeshot --in10
-
 # Take screenshot of active window
-ctrl + Print
-	takeshot --win
+super + Print
+	bspscreenshot --win
 
 # Take screenshot of area
-shift + Print
-	takeshot --area
+super + shift + Print
+	bspscreenshot --area
 
 # Brighness control
 XF86MonBrightness{Up,Down}
-	brightness{ --inc, --dec}
+	bspbrightness{ --inc, --dec}
 	
-# Volume control
+# Speaker Volume control
 XF86Audio{RaiseVolume,LowerVolume}
-	volume{ --inc, --dec}
+	bspvolume{ --inc, --dec}
 
-XF86AudioMute
-	volume --toggle
+# Mic Volume control
+XF86Audio{Mute,MicMute}
+	bspvolume{ --toggle, --toggle-mic}
 	
 # Music control
 XF86Audio{Next,Prev,Play,Stop}
@@ -105,22 +91,54 @@ XF86Audio{Next,Prev,Play,Stop}
 
 ##---------- Bspwm ----------##
 
+# Hide/Unhide Window
+super + shift + h
+	bspwinmask
+
 # Close App
 super + {_,shift + }c
 	bspc node -{c,k}
 
-# Reload Keybindings
-super + Escape
-	pkill -USR1 -x sxhkd
-
 # kill window
-#ctrl + alt + Escape
-#    xkill
+ctrl + alt + Escape
+    xkill
 
 # Quit/Restart bspwm
 super + shift + {q,r}
 	bspc {quit,wm -r}
 	
+# Reload Keybindings
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# Switch workspace
+ctrl + alt + {Left,Right}
+	bspc desktop -f {prev.local,next.local}
+
+# Switch workspace or Send focused Node to another workspace
+super + {_,shift + }{1-8}
+	bspc {desktop -f,node -d} '^{1-8}' '--follow'
+
+# Send focused Node to workspace directionally
+super + ctrl + shift + {Left,Right}
+	bspc node -d {prev,next} '--follow'
+
+# Change focus of the Node or Swap Nodes
+super + {_,shift + }{Left,Down,Up,Right}
+	bspc node -{f,s} {west,south,north,east}
+
+# Move floating windows
+super + alt + shift + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+# Expanding windows
+super + control + {Left,Right,Up,Down}
+	bspc node -z {left -20 0,right 20 0,top 0 -20,bottom 0 20}
+	
+# Shrinking windows
+super + alt + {Left,Right,Up,Down}
+	bspc node -z {left 20 0,right -20 0,top 0 20,bottom 0 -20}
+
 # Split horizontal, vertical or cancel
 super + {h,v,q}
 	bspc node -p {east,south,cancel}
@@ -129,9 +147,12 @@ super + {h,v,q}
 super + ctrl + {1-9}
 	bspc node -o 0.{1-9}
 
-# Fullscreen or Monocle
+# Toggle Layout (Tiled/Monocle)
+super + l
+	bspc desktop -l next
+
+# Toggle Fullscreen
 super + f
-#	bspc desktop -l next
     bspc node -t "~"fullscreen
 
 # Toggle beetwen floating & tiled
@@ -140,46 +161,18 @@ super + space
 
 # Pseudo Tiled & tiled mode
 super + shift + space
-#super + {p,t}
     bspc node -t "~"{pseudo_tiled,tiled}
 
 # Set the node flags
 super + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
 
-# Send the window to another edge of the screen
-super + {_,shift + }{Left,Down,Up,Right}
-	bspc node -{f,s} {west,south,north,east}
-
 # Change focus to next window, including floating window
 alt + {_,shift + }Tab
-	bspc node -f {next.local.window,prev.local.window}
-
-# Switch workspace
-ctrl + alt + {Left,Right}
-	bspc desktop -f {prev.local,next.local}
+	bspc node -f {next.local,prev.local}
 
 # Switch to last opened workspace
 super + {Tab,grave}
 	bspc {node,desktop} -f last
-
-# Send focused window to another workspace
-super + {_,shift + }{1-8}
-	bspc {desktop -f,node -d} '^{1-8}'
-
-# Expanding windows
-super + control + {Left,Right,Up,Down}
-	bspc node -z {left -20 0,right 20 0,top 0 -20,bottom 0 20}
 	
-## Shrinking windows
-super + alt + {Left,Right,Up,Down}
-	bspc node -z {left 20 0,right -20 0,top 0 20,bottom 0 -20}
-	
-## Move floating windows
-alt + shift + {Left,Down,Up,Right}
-	bspc node -v {-20 0,0 20,0 -20,20 0}
-
-# Hide/Unhide Window
-super + shift + i
-	winmask		
 ##---------- EOF ----------##
