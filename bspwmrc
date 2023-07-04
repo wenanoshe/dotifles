@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-## Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
+## Copyright (C) 2020-2023 Aditya Shakya <adi1090x@gmail.com>
 ##
 ## BSPWM config file for Archcraft
 
@@ -38,8 +38,7 @@ workspaces() {
 		#bspc monitor ${monitor} -n "$name" -d '1' '2' '3' '4' '5' '6' '7' '8'
 		#bspc monitor ${monitor} -n "$name" -d 'A' 'B' 'C' 'D' 'E' 'F' 'G' 'H'
 		#bspc monitor ${monitor} -n "$name" -d 'I' 'II' 'III' 'IV' 'V' 'VI' 'VII' 'VIII'
-		# bspc monitor ${monitor} -n "$name" -d '' '' '' '' '' '' '' ''
-		bspc monitor ${monitor} -n "$name" -d '' '' '' '' '' '' '' ''
+		bspc monitor ${monitor} -n "$name" -d '' '' '' '' '' '' '' ''
 		let name++
 	done
 }
@@ -62,9 +61,6 @@ bspc config single_monocle false
 bspc config focus_follows_pointer false
 bspc config presel_feedback true
 
-#plank
-bspc rule -a Plank layer=above manage=on border=off
-
 ## Manage all the unmanaged windows remaining from a previous session.
 bspc wm --adopt-orphans
 
@@ -80,15 +76,13 @@ bspc rule -a Xfce4-terminal desktop='^1' follow=on focus=on
 ## 2 > web (always open web browser on workspace-2)
 bspc rule -a firefox desktop='^2' follow=on focus=on
 bspc rule -a chromium desktop='^2' follow=on focus=on
-bspc rule -a Brave-browser desktop='^2' follow=on focus=on
 
-## 3 > code (always open editors on workspace-3)
+## 3 > code (always open editors on workspace-4)
 declare -a code=(Geany code-oss)
 for i in ${code[@]}; do
    bspc rule -a $i desktop='^3' follow=on focus=on; done
 
-
-## 4 > files (always open file manager on workspace-4)
+## 4 > files (always open file manager on workspace-3)
 declare -a files=(Pcmanfm Thunar qBittorrent)
 for i in ${files[@]}; do
    bspc rule -a $i desktop='^4' follow=on focus=on; done
@@ -120,7 +114,7 @@ for i in ${settings[@]}; do
    bspc rule -a $i desktop='^8' state=floating follow=on focus=on; done
 
 ## Always Floating Apps
-declare -a floating=(alacritty-float TelegramDesktop Pcmanfm Thunar Onboard Yad 'Firefox:Places' \
+declare -a floating=(alacritty-float Pcmanfm Thunar Onboard Yad 'Firefox:Places' \
 Viewnior feh Nm-connection-editor)
 for i in ${floating[@]}; do
    bspc rule -a $i state=floating follow=on focus=on; done
@@ -166,8 +160,5 @@ bspcomp
 bspdunst
 bspfloat &
 
-# Greenclip
+# greenclip
 greenclip daemon &
-
-#plank 
-plank &
