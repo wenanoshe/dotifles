@@ -62,6 +62,9 @@ bspc config single_monocle false
 bspc config focus_follows_pointer false
 bspc config presel_feedback true
 
+#plank
+bspc rule -a Plank layer=above manage=on border=off
+
 ## Manage all the unmanaged windows remaining from a previous session.
 bspc wm --adopt-orphans
 
@@ -165,3 +168,6 @@ bspfloat &
 
 # Greenclip
 greenclip daemon &
+
+#plank 
+plank &
