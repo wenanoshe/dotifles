@@ -76,6 +76,7 @@ bspc rule -a Xfce4-terminal desktop='^1' follow=on focus=on
 ## 2 > web (always open web browser on workspace-2)
 bspc rule -a firefox desktop='^2' follow=on focus=on
 bspc rule -a chromium desktop='^2' follow=on focus=on
+bspc rule -a Brave-browser desktop='^2' follow=on focus=on
 
 ## 3 > code (always open editors on workspace-4)
 declare -a code=(Geany code-oss)
@@ -88,14 +89,14 @@ for i in ${files[@]}; do
    bspc rule -a $i desktop='^4' follow=on focus=on; done
 
 ## 5 > office and docs (always open office/doc apps on workspace-5)
-declare -a office=(Gucharmap Atril Evince \
+declare -a office=(notion-app obsidian Gucharmap Atril Evince \
 libreoffice-writer libreoffice-calc libreoffice-impress \
 libreoffice-startcenter libreoffice Soffice *:libreofficedev *:soffice)
 for i in ${office[@]}; do
    bspc rule -a $i desktop='^5' follow=on focus=on; done
 
 ## 6 > communication (always open communication apps on workspace-6)
-declare -a comm=(Thunderbird TelegramDesktop Hexchat)
+declare -a comm=(Thunderbird TelegramDesktop Hexchat discord)
 for i in ${comm[@]}; do
    bspc rule -a $i desktop='^6' follow=on focus=on; done
 
