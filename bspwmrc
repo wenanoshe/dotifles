@@ -79,7 +79,7 @@ bspc rule -a chromium desktop='^2' follow=on focus=on
 bspc rule -a Brave-browser desktop='^2' follow=on focus=on
 
 ## 3 > code (always open editors on workspace-4)
-declare -a code=(Geany code-oss)
+declare -a code=(Geany code-oss terminal64.exe)
 for i in ${code[@]}; do
    bspc rule -a $i desktop='^3' follow=on focus=on; done
 
@@ -115,7 +115,7 @@ for i in ${settings[@]}; do
    bspc rule -a $i desktop='^8' state=floating follow=on focus=on; done
 
 ## Always Floating Apps
-declare -a floating=(alacritty-float Pcmanfm Thunar Onboard Yad 'Firefox:Places' \
+declare -a floating=(TelegramDesktop alacritty-float Pcmanfm Thunar Onboard Yad 'Firefox:Places' \
 Viewnior feh Nm-connection-editor)
 for i in ${floating[@]}; do
    bspc rule -a $i state=floating follow=on focus=on; done
