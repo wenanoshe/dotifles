@@ -123,10 +123,9 @@ for i in ${floating[@]}; do
 bspc rule -a Conky state=floating manage=off
 bspc rule -a stalonetray state=floating manage=off
 #plank
-# bspc rule -a Plank layer=above manage=on border=off
+bspc rule -a Plank layer=below sticky=on manage=off
 
 ## Autostart -------------------------------------------------#
-# plank &
 
 # Kill if already running
 killall -9 xsettingsd sxhkd dunst ksuperkey xfce4-power-manager bspc
@@ -166,3 +165,6 @@ bspfloat &
 
 # greenclip
 greenclip daemon &
+
+# Plank
+plank &
