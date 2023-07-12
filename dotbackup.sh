@@ -26,6 +26,9 @@ cp -r $HOME/.config/bspwm/polybar/ ./polybar
 # Sxhkd config 
 cp -r $HOME/.config/bspwm/sxhkdrc .
 
+# openbox rc.xml
+cp -r $HOME/.config/openbox/rc.xml ./openbox
+
 # ZSH config
 cp -r $HOME/.zshrc .
 mv .zshrc ./zshrc
