@@ -4,7 +4,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 export EDITOR=nvim
-export OPENAI_API_KEY=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
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
