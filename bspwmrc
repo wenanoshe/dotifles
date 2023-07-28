@@ -125,6 +125,9 @@ bspc rule -a stalonetray state=floating manage=off
 #plank
 bspc rule -a Plank layer=below sticky=on manage=off
 
+# Make all new windows floating
+bspc rule -a \* state=floating
+
 ## Autostart -------------------------------------------------#
 
 # Kill if already running
